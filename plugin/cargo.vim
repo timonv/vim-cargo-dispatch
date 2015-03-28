@@ -8,10 +8,10 @@ if !exists('g:cargo_command')
 endif
 
 com! CargoBuild call cargo#run('build')
-com! CargoRun   call cargo#run('run')
-com! CargoTest  call cargo#run('test')
+com! CargoRun call cargo#run('run')
+com! CargoTest call cargo#run('test')
 com! CargoBench call cargo#run('bench')
-com! CargoNew   call cargo#run('new')
+com! -bar -bang -complete=file -nargs=+ CargoNew call cargo#run('new' . string(<q-args>))
 
 func! cargo#run(cmd)
   let s:cargo_command = substitute(g:cargo_command, "{cmd}", a:cmd, 'g')
