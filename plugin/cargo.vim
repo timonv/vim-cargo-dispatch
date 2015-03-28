@@ -14,7 +14,7 @@ com! CargoDoc call cargo#run('doc')
 com! CargoRun call cargo#run('run')
 com! CargoTest call cargo#run('test')
 com! CargoUpdate call cargo#run('update')
-com! -complete=file -nargs=+ CargoNew call cargo#run('new ' . string(<q-args>))
+com! -complete=file -nargs=1 CargoNew call cargo#run('new ' . string(<q-args>))
 
 func! cargo#run(cmd)
   let s:cargo_command = substitute(g:cargo_command, "{cmd}", a:cmd, 'g')
