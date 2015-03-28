@@ -4,11 +4,14 @@ Simple vim command bindings to quickly run cargo stuff from vim.
 
 ## Commands Available, mapping with their Cargo equivalant:
 
+* CargoBench
 * CargoBuild
+* CargoClean
+* CargoDoc
+* CargoNew
 * CargoRun
 * CargoTest
-* CargoBench
-* CargoNew
+* CargoUpdate
 
 ## Usage
 
