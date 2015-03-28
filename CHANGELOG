@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+* Add CargoClean, CargoDoc, CargoNew, and CargoUpdate
+
 ## 0.0.1
 
 * Allow running dispatch implictly, removing the dependency. This makes it possible
