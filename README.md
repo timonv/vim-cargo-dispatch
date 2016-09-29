@@ -4,10 +4,14 @@ Simple vim command bindings to quickly run cargo stuff from vim.
 
 ## Commands Available, mapping with their Cargo equivalant:
 
-* CargoBuild
-* CargoRun
-* CargoTest
-* CargoBench
+* CargoBuild, CargoBuildSuper
+* CargoRun, CargoRunSuper
+* CargoTest, CargoTestSuper
+* CargoBench, CargoBenchSuper
+
+The *super* versions of these functions detects the outer-most `Cargo.toml` file -
+useful to build the outer project when developing nested crates.
+
 
 ## Installation
 
