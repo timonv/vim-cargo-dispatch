@@ -10,17 +10,17 @@ if !exists('g:cargo_command')
   let g:cargo_command = "make {cmd}"
 endif
 
-com! -nargs=* CargoBench call cargo#run('bench ' . <q-args>)
-com! -nargs=* CargoBuild call cargo#run('build ' . <q-args>)
-com! -nargs=* CargoCheck call cargo#run('check ' . <q-args>)
-com! -nargs=* CargoClean call cargo#run('clean ' . <q-args>)
-com! -nargs=* CargoDoc call cargo#run('doc ' . <q-args>)
-com! -nargs=* CargoRun call cargo#run('run ' . <q-args>)
-com! -nargs=* CargoTest call cargo#run('test ' . <q-args>)
-com! -nargs=* CargoUpdate call cargo#run('update ' . <q-args>)
-com! -complete=file -nargs=+ CargoNew call cargo#run('new ' . <q-args>)
+com! -nargs=* CargoBench call cargo#('bench ' . <q-args>)
+com! -nargs=* CargoBuild call cargo#('build ' . <q-args>)
+com! -nargs=* CargoCheck call cargo#('check ' . <q-args>)
+com! -nargs=* CargoClean call cargo#('clean ' . <q-args>)
+com! -nargs=* CargoDoc call cargo#('doc ' . <q-args>)
+com! -nargs=* CargoRun call cargo#('run ' . <q-args>)
+com! -nargs=* CargoTest call cargo#('test ' . <q-args>)
+com! -nargs=* CargoUpdate call cargo#('update ' . <q-args>)
+com! -complete=file -nargs=+ CargoNew call cargo#('new ' . <q-args>)
 
-func! cargo#run(cmd)
+func! cargo#(cmd)
   let s:cargo_command = substitute(g:cargo_command, "{cmd}", a:cmd, 'g')
   execute s:cargo_command
 endf
